@@ -6,5 +6,5 @@ refs.outputText.style.fontSize = `${refs.inputRange.value}px`;
 refs.inputRange.addEventListener('input', onInputSizeChange);
 
 function onInputSizeChange(event) {
-  refs.outputText.style.fontSize = `${event.currentTarget.value}px`;
+  refs.outputText.style.fontSize = `${event.target.value}px`;
 }

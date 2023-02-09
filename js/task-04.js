@@ -54,11 +54,11 @@
 
 // new Counter('#counter');
 // new Counter('#counter2');
-const counterPlus = () => document.querySelector('#value').textContent++;
-const incrementBut = document.querySelector('button[data-action="increment"]');
+// const counterPlus = () => document.querySelector('#value').textContent++;
+// const incrementBut = document.querySelector('button[data-action="increment"]');
 
-const counterMinus = () => document.querySelector('#value').textContent--;
-const decrementBut = document.querySelector('button[data-action="decrement"]');
+// const counterMinus = () => document.querySelector('#value').textContent--;
+// const decrementBut = document.querySelector('button[data-action="decrement"]');
 
-const onclickUp = incrementBut.addEventListener('click', counterPlus);
-const onclickDown = decrementBut.addEventListener('click', counterMinus);
+// const onclickUp = incrementBut.addEventListener('click', counterPlus);
+// const onclickDown = decrementBut.addEventListener('click', counterMinus);

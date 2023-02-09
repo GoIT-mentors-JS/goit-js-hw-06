@@ -9,6 +9,7 @@ function onSubmit(event) {
   const { email, password } = event.currentTarget.elements;
   if (email.value === '' || password.value === '') {
     alert('Не все поля заполнены');
+    return;
   }
   console.log({ email: email.value, password: password.value });
   refs.loginForm.reset();
