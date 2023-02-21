@@ -29,9 +29,7 @@ input.addEventListener('blur', onBlur);
 
 function onBlur(event) {
   const inputValueLength = event.target.value.length;
-  console.log(inputValueLength);
   const inputLength = +event.target.dataset.length;
-  console.log(inputLength);
 
   if (inputValueLength !== inputLength) {
     input.classList.add('valid');
