@@ -2,22 +2,15 @@ const refs = {
   loginForm: document.querySelector('.login-form'),
 };
 
-refs.loginForm.addEventListener('submit', onSubmit);
+refs.loginForm.addEventListener('submit', onLoginFormSubmit);
 
-function onSubmit(event) {
+function onLoginFormSubmit(event) {
   event.preventDefault();
   const { email, password } = event.currentTarget.elements;
   if (!email.value || !password.value) {
-    alert('Не все поля заполнены');
+    alert('Не всі пол заповнені');
     return;
   }
   console.log({ email: email.value, password: password.value });
-  refs.loginForm.reset();
+  event.target.reset();
 }
-
-// function onSubmit(event) {
-//   event.preventDefault();
-//   const formData = new FormData(refs.loginForm);
-//   formData.forEach((value, name) => console.log(value, name));
-//   console.log(formData);
-// }

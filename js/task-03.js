@@ -17,6 +17,8 @@ const refs = {
   imagesList: document.querySelector('.gallery'),
 };
 
+refs.imagesList.insertAdjacentHTML('beforeend', createItemsMarkup(images));
+
 function createItemsMarkup(images) {
   return images
     .map(
@@ -26,5 +28,4 @@ function createItemsMarkup(images) {
     .join('');
 }
 
-refs.imagesList.insertAdjacentHTML('afterbegin', createItemsMarkup(images));
 refs.imagesList.style.display = 'flex';

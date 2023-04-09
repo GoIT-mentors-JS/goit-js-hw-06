@@ -16,7 +16,7 @@ function onCreateButtonClick() {
   const inputValue = Number(refs.input.value);
   if (!(inputValue >= 1 && inputValue <= 100)) {
     refs.input.value = '';
-    return alert('Введите пожалуйста число от 1 до 100');
+    return alert('Введіть, будь ласка, число від 1 до 100');
   }
   createBoxes(inputValue);
   refs.input.value = '';

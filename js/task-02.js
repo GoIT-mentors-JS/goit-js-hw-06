@@ -11,7 +11,9 @@ const refs = {
   listIngredients: document.querySelector('#ingredients'),
 };
 
-function createMarkupItem(ingredients) {
+refs.listIngredients.append(...createItemsMarkup(ingredients));
+
+function createItemsMarkup(ingredients) {
   return ingredients.map(ingredient => {
     const li = document.createElement('li');
     li.classList.add('item');
@@ -19,5 +21,3 @@ function createMarkupItem(ingredients) {
     return li;
   });
 }
-
-refs.listIngredients.append(...createMarkupItem(ingredients));
