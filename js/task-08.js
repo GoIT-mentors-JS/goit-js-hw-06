@@ -7,10 +7,12 @@ refs.loginForm.addEventListener('submit', onLoginFormSubmit);
 function onLoginFormSubmit(event) {
   event.preventDefault();
   const { email, password } = event.currentTarget.elements;
-  if (!email.value || !password.value) {
+  const emailValue = email.trim();
+  const passwordValue = password.trim();
+  if (!emailValue || !passwordValue) {
     alert('Не всі пол заповнені');
     return;
   }
-  console.log({ email: email.value, password: password.value });
+  console.log({ email: emailValue, password: passwordValue });
   event.target.reset();
 }
